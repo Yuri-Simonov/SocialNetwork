@@ -1,9 +1,9 @@
-import Header from './components/Header';
+import Header from './components/Header/Header';
 import './App.css';
 import './nullstyle.css';
-import Nav from './components/Nav';
-import Content from './components/Content';
-import Footer from './components/Footer';
+import Nav from './components/Nav/Nav';
+import Content from './components/Content/Content';
+
 
 const App = () => {
 	return (
@@ -13,7 +13,7 @@ const App = () => {
 					<Header />
 					<Nav />
 					<Content />
-					<Footer />
+
 				</div>
 			</div>
 		</body >

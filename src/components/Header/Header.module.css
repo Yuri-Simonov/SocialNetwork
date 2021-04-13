@@ -1,0 +1,26 @@
+.header {
+	grid-area: h;
+	background: rgb(27, 20, 20);
+	background: linear-gradient(0deg, rgba(27, 20, 20, 1) 0%, rgba(31, 73, 101, 1) 50%, rgba(59, 125, 131, 1) 100%);
+}
+
+.img {
+	width: 20px;
+	height: auto;
+	display: inline-block;
+	padding: 10px 0 10px 0;
+	margin-left: 15px;
+}
+.grid {
+	display: grid;
+	grid-template-columns: minmax(100px, 1fr) repeat(3, 1fr);
+	justify-content: space-around;
+	align-items: center;
+}
+.logo {
+	display: flex;
+	align-items: center;
+}
+.logo span {
+	margin-left: 10px;
+}

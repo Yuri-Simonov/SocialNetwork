@@ -1,9 +1,9 @@
-import '../App.css';
+import s from './Nav.module.css';
 
 const Nav = () => {
 	return (
-		<nav className="nav">
-			<ul className="list">
+		<nav className={s.nav}>
+			<ul className={s.list}>
 				<a href="">
 					<li>Моя страница</li>
 				</a>
