@@ -1,30 +1,31 @@
+import { NavLink } from 'react-router-dom';
 import s from './Nav.module.css';
 
 const Nav = () => {
 	return (
 		<nav className={s.nav}>
 			<ul className={s.list}>
-				<a href="">
+				<NavLink to="/myPage">
 					<li>Моя страница</li>
-				</a>
-				<a href="">
+				</NavLink>
+				<NavLink to="/news">
 					<li>Новости</li>
-				</a>
-				<a href="">
+				</NavLink>
+				<NavLink to="/messages">
 					<li>Сообщения</li>
-				</a>
-				<a href="">
+				</NavLink>
+				<NavLink to="/photos">
 					<li>Фотографии</li>
-				</a>
-				<a href="">
+				</NavLink>
+				<NavLink to="/music">
 					<li>Музыка</li>
-				</a>
-				<a href="">
+				</NavLink>
+				<NavLink to="/games">
 					<li>Игры</li>
-				</a>
-				<a href="">
+				</NavLink>
+				<NavLink to="/settings">
 					<li>Настройки</li>
-				</a>
+				</NavLink>
 			</ul>
 		</nav>
 	);

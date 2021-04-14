@@ -1,7 +1,7 @@
 import Posts from '../Posts/Post';
-import s from './Content.module.css';
+import s from './MyPage.module.css';
 
-const Content = () => {
+const MyPage = () => {
 	return (
 		<div className={s.content}>
 			<img src="https://lookw.ru/9/957/1566942119-93.jpg"></img>
@@ -14,4 +14,4 @@ const Content = () => {
 	);
 }
 
-export default Content;
+export default MyPage;
