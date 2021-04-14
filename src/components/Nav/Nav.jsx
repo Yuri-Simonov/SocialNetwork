@@ -5,25 +5,25 @@ const Nav = () => {
 	return (
 		<nav className={s.nav}>
 			<ul className={s.list}>
-				<NavLink to="/myPage">
+				<NavLink to="/myPage" activeClassName={s.active} >
 					<li>Моя страница</li>
 				</NavLink>
-				<NavLink to="/news">
+				<NavLink to="/news" activeClassName={s.active}>
 					<li>Новости</li>
 				</NavLink>
-				<NavLink to="/messages">
+				<NavLink to="/messages" activeClassName={s.active}>
 					<li>Сообщения</li>
 				</NavLink>
-				<NavLink to="/photos">
+				<NavLink to="/photos" activeClassName={s.active}>
 					<li>Фотографии</li>
 				</NavLink>
-				<NavLink to="/music">
+				<NavLink to="/music" activeClassName={s.active}>
 					<li>Музыка</li>
 				</NavLink>
-				<NavLink to="/games">
+				<NavLink to="/games" activeClassName={s.active}>
 					<li>Игры</li>
 				</NavLink>
-				<NavLink to="/settings">
+				<NavLink to="/settings" activeClassName={s.active}>
 					<li>Настройки</li>
 				</NavLink>
 			</ul>

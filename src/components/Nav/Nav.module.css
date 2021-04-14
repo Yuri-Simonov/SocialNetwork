@@ -13,3 +13,6 @@
 .list a {
 	color: white;
 }
+.active li {
+	color: gold;
+}

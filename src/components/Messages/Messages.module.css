@@ -1,0 +1,22 @@
+.dialogs {
+	display: grid;
+	grid-template-columns: 1.5fr 8fr;
+}
+
+.contacts {
+	padding-left: 30px;
+	align-items: center;
+}
+.contacts div {
+	padding: 15px;
+	border: 1px solid #000;
+	border-top: none;
+}
+.contacts div:first-child {
+	border-top: 1px solid #000;
+}
+.sms {
+}
+.sms div {
+	padding: 15px;
+}
