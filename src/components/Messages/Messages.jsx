@@ -1,4 +1,21 @@
+import { NavLink } from 'react-router-dom';
 import s from './Messages.module.css';
+
+const MessagesItem = (props) => {
+	return (
+		<div>
+			<NavLink to={"/messages/" + props.id} activeClassName={s.active}>{props.name}</NavLink>
+		</div>
+	);
+}
+
+const MessagesValue = (props) => {
+	return (
+		<div>
+			{props.message}
+		</div>
+	);
+}
 
 
 const Messages = (props) => {
@@ -6,38 +23,22 @@ const Messages = (props) => {
 		<div>
 			<div className={s.dialogs}>
 				<div className={s.contacts}>
-					<div>
-						Маша
-					</div>
-					<div>
-						Дима
-					</div>
-					<div>
-						Катя
-					</div>
-					<div>
-						Виктор
-					</div>
-					<div>
-						Максим
-					</div>
-					<div>
-						Григорий
-					</div>
+
+					<MessagesItem name="Маша" id="1" />
+					<MessagesItem name="Дима" id="2" />
+					<MessagesItem name="Катя" id="3" />
+					<MessagesItem name="Виктор" id="4" />
+					<MessagesItem name="Максим" id="5" />
+					<MessagesItem name="Григорий" id="6" />
+
 				</div>
 				<div className={s.sms}>
-					<div>
-						Здарова
-					</div>
-					<div>
-						Как ты?
-					</div>
-					<div>
-						Ау
-					</div>
-					<div>
-						Ты тут?
-					</div>
+
+					<MessagesValue message="Здарова" />
+					<MessagesValue message="Как ты?" />
+					<MessagesValue message="Ау" />
+					<MessagesValue message="Ты тут?" />
+
 				</div>
 			</div>
 

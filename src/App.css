@@ -21,7 +21,6 @@ body {
 	size: 14px;
 	color: white;
 }
-
 .content {
 	grid-area: c;
 	background: rgb(27, 20, 20);

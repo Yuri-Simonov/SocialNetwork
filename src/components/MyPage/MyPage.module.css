@@ -4,3 +4,15 @@
 .item {
 	color: red;
 }
+
+.title {
+	margin: 15px;
+	font-weight: 700;
+	font-size: 20px;
+}
+.textarea {
+	width: 50%;
+	display: block;
+	margin-bottom: 20px;
+	border-radius: 5px;
+}
