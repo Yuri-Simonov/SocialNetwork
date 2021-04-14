@@ -4,6 +4,18 @@ import s from './MyPage.module.css';
 
 
 const MyPage = () => {
+
+	let MyPageData = [
+		{ id: 1, message: "Сегодня уже третий день, как я пытаюсь их понять... убейте меня, чтобы я не мучался...", },
+		{ id: 2, message: "Долбанные прототипы... Кто может объяснить их мне?", },
+		{ id: 3, message: "Сегодня начал изучать основы JavaScript", },
+		{ id: 4, message: "Что-то тут совсем тихо", },
+		{ id: 5, message: "Всем привет, я тут новенький!", },
+
+	]
+
+	let postsElements = MyPageData.map((m) => <Posts message={m.message} />)
+
 	return (
 		<div className={s.content}>
 			<MyPageTopSection />
@@ -11,11 +23,7 @@ const MyPage = () => {
 			<div>
 				<textarea className={s.textarea}></textarea>
 			</div>
-			<Posts message="Сегодня уже третий день, как я пытаюсь их понять... убейте меня, чтобы я не мучался..." />
-			<Posts message="Долбанные прототипы... Кто может объяснить их мне?" />
-			<Posts message="Сегодня начал изучать основы JavaScript" />
-			<Posts message="Что-то тут совсем тихо" />
-			<Posts message="Всем привет, я тут новенький!" />
+			{postsElements}
 		</div>
 	);
 }

@@ -19,26 +19,38 @@ const MessagesValue = (props) => {
 
 
 const Messages = (props) => {
+
+	let messagesUser = [
+		{ id: 1, name: "Маша", },
+		{ id: 2, name: "Дима", },
+		{ id: 3, name: "Катя", },
+		{ id: 4, name: "Виктор", },
+		{ id: 5, name: "Максим", },
+		{ id: 6, name: "Григорий", },
+	]
+	// d - dialogs (сокращение)
+	let messagesElements = messagesUser.map((d) => <MessagesItem name={d.name} id={d.id} />)
+
+
+
+	let smsData = [
+		{ id: 1, message: "Здарова", },
+		{ id: 2, message: "Как ты?", },
+		{ id: 3, message: "Ау", },
+		{ id: 4, message: "Ты тут?", },
+
+	]
+
+	let smsElements = smsData.map((s) => <MessagesValue message={s.message} />)
+
 	return (
 		<div>
 			<div className={s.dialogs}>
 				<div className={s.contacts}>
-
-					<MessagesItem name="Маша" id="1" />
-					<MessagesItem name="Дима" id="2" />
-					<MessagesItem name="Катя" id="3" />
-					<MessagesItem name="Виктор" id="4" />
-					<MessagesItem name="Максим" id="5" />
-					<MessagesItem name="Григорий" id="6" />
-
+					{messagesElements}
 				</div>
 				<div className={s.sms}>
-
-					<MessagesValue message="Здарова" />
-					<MessagesValue message="Как ты?" />
-					<MessagesValue message="Ау" />
-					<MessagesValue message="Ты тут?" />
-
+					{smsElements}
 				</div>
 			</div>
 
