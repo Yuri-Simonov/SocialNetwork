@@ -11,7 +11,6 @@ const MyPage = () => {
 		{ id: 3, message: "Сегодня начал изучать основы JavaScript", },
 		{ id: 4, message: "Что-то тут совсем тихо", },
 		{ id: 5, message: "Всем привет, я тут новенький!", },
-
 	]
 
 	let postsElements = MyPageData.map((m) => <Posts message={m.message} />)

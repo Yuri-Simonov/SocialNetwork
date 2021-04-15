@@ -3,7 +3,6 @@ import s from './Post.module.css';
 const Posts = (props) => {
 
 
-
 	return (
 		<div>
 
