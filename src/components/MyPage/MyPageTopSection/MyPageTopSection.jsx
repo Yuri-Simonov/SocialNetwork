@@ -14,15 +14,15 @@ const MyPageTopSection = (props) => {
 					<div className={s.friendsFlex}>
 						<div>
 							<img className={s.friends1} src="http://img1.joyreactor.cc/pics/post/full/%D0%BA%D0%BE%D1%82%D1%8D-4558385.jpeg"></img>
-							<p className={s.nameFriends}>Света</p>
+							<p className={s.nameFriends}>{props.name[0]}</p>
 						</div>
 						<div>
 							<img className={s.friends1} src="http://img1.joyreactor.cc/pics/post/full/%D0%BA%D0%BE%D1%82%D1%8D-4558385.jpeg"></img>
-							<p className={s.nameFriends}>{props.name}</p>
+							<p className={s.nameFriends}>{props.name[1]}</p>
 						</div>
 						<div>
 							<img className={s.friends1} src="http://img1.joyreactor.cc/pics/post/full/%D0%BA%D0%BE%D1%82%D1%8D-4558385.jpeg"></img>
-							<p className={s.nameFriends}>{props.name}</p>
+							<p className={s.nameFriends}>{props.name[2]}</p>
 						</div>
 					</div>
 				</div>

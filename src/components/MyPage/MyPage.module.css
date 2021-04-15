@@ -12,7 +12,19 @@
 }
 .textarea {
 	width: 50%;
-	display: block;
-	margin-bottom: 20px;
+
 	border-radius: 5px;
+}
+.button {
+	padding: 10px 15px;
+	display: inline-block;
+	border-radius: 5px;
+	margin-left: 20px;
+	font-weight: 500;
+	font-size: 14px;
+}
+
+.flex {
+	display: flex;
+	margin-bottom: 20px;
 }

@@ -3,12 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import state from "./components/Redux/state";
+import state, { addPost } from "./components/Redux/state";
+
+/* addPost("fgdfgfg"); */
 
 
 ReactDOM.render(
 	<React.StrictMode>
-		<App state={state} />
+		<App state={state} friends={state.myPage.friendsNames} addPost={addPost} />
 	</React.StrictMode>,
 	document.getElementById('root')
 );

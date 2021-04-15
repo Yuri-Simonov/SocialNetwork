@@ -36,3 +36,21 @@
 .evenMessage:nth-child(even) {
 	text-align: right;
 }
+
+.textarea {
+	width: 90%;
+	border-radius: 5px;
+}
+.button {
+	padding: 10px 15px;
+	display: inline-block;
+	border-radius: 5px;
+	margin-left: 20px;
+	font-weight: 500;
+	font-size: 14px;
+}
+
+.flex {
+	display: flex;
+	margin-bottom: 20px;
+}

@@ -23,7 +23,7 @@ const App = (props) => {
 						<Header />
 						<Nav />
 						<div className="content">
-							<Route path="/myPage" render={() => <MyPage state={props.state.myPage} />} />
+							<Route path="/myPage" render={() => <MyPage state={props.state.myPage} friends={props.friends} addPost={props.addPost} />} />
 							<Route path="/news" render={() => <News />} />
 							<Route path="/messages" render={() => <Messages state={props.state.messagePage} />} />
 							<Route path="/photos" render={() => <Photo />} />

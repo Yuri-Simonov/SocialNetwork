@@ -9,11 +9,12 @@ let state = {
 			{ id: 4, message: "Что-то тут совсем тихо", },
 			{ id: 5, message: "Всем привет, я тут новенький!", },
 		],
-		friendsNames: [
+		/* friendsNames: [
 			{ id: 1, name: "Света", },
 			{ id: 2, name: "Рома", },
 			{ id: 3, name: "Игорь", },
-		],
+		], */
+		friendsNames: ["Света", "Рома", "Игорь"],
 	},
 	messagePage: {
 		smsData: [
@@ -34,6 +35,14 @@ let state = {
 
 }
 
+export let addPost = (postMessage) => {
+	let newPost = {
+		id: 6,
+		message: postMessage,
+	};
+
+	state.myPage.MyPageData.push(newPost)
+};
 
 
 export default state;
