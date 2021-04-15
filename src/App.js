@@ -13,7 +13,8 @@ import { Route } from 'react-router';
 import { BrowserRouter } from 'react-router-dom';
 
 
-const App = () => {
+const App = (props) => {
+
 	return (
 		<body className="page">
 			<BrowserRouter>
@@ -22,13 +23,13 @@ const App = () => {
 						<Header />
 						<Nav />
 						<div className="content">
-							<Route path="/myPage" component={MyPage} />
-							<Route path="/news" component={News} />
-							<Route path="/messages" component={Messages} />
-							<Route path="/photos" component={Photo} />
-							<Route path="/music" component={Music} />
-							<Route path="/games" component={Games} />
-							<Route path="/settings" component={Settings} />
+							<Route path="/myPage" render={() => <MyPage state={props.state.myPage} />} />
+							<Route path="/news" render={() => <News />} />
+							<Route path="/messages" render={() => <Messages state={props.state.messagePage} />} />
+							<Route path="/photos" render={() => <Photo />} />
+							<Route path="/music" render={() => <Music />} />
+							<Route path="/games" render={() => <Games />} />
+							<Route path="/settings" render={() => <Settings />} />
 						</div>
 					</div>
 				</div>

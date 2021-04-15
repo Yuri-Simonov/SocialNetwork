@@ -1,6 +1,6 @@
 .dialogs {
 	display: grid;
-	grid-template-columns: 1.5fr 8fr;
+	grid-template-columns: 2fr 8fr;
 }
 
 .contacts {
@@ -11,16 +11,28 @@
 	padding: 15px;
 	border: 1px solid #000;
 	border-top: none;
+	display: flex;
+	align-items: center;
 }
 .contacts div:first-child {
 	border-top: 1px solid #000;
 }
+.contacts img {
+	width: 50px;
+	height: auto;
+	border-radius: 50%;
+	margin-right: 25px;
+}
 .sms {
 }
 .sms div {
-	padding: 15px;
+	padding: 15px 25px;
 }
 
 .active {
 	color: gold;
+}
+
+.evenMessage:nth-child(even) {
+	text-align: right;
 }

@@ -1,7 +1,44 @@
 .grid {
+	padding-top: 20px;
 	display: grid;
 	grid-template-columns: 3fr 10fr;
+	grid-template-rows: auto auto;
+	grid-template-areas:
+		"a d"
+		"f d";
 }
 .grid img {
+}
+.avatar {
+	grid-area: a;
 	max-width: 100%;
+}
+.friends {
+	grid-area: f;
+}
+.friendsFlex {
+	display: flex;
+	justify-content: space-around;
+}
+.friendsTitle {
+	margin-top: 40px;
+	font-weight: 500;
+	margin-left: 10px;
+	font-size: 26px;
+}
+.friends1,
+.friends2,
+.friends3 {
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	margin-top: 30px;
+}
+.description {
+	grid-area: d;
+}
+.nameFriends {
+	text-align: center;
+	padding-top: 10px;
+	margin-bottom: 50px;
 }
