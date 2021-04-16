@@ -12,9 +12,12 @@ const MyPage = (props) => {
 
 
 	let newPostElement = React.createRef();
+
 	let addPost = () => {
+
 		let newText = newPostElement.current.value;
 		props.addPost(newText);
+		newPostElement.current.value = '';
 	}
 
 	return (

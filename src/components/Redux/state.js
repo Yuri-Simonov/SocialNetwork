@@ -1,4 +1,4 @@
-
+import { rerenderEntireTree } from '../../render';
 
 let state = {
 	myPage: {
@@ -36,13 +36,28 @@ let state = {
 }
 
 export let addPost = (postMessage) => {
+
 	let newPost = {
 		id: 6,
 		message: postMessage,
 	};
 
-	state.myPage.MyPageData.push(newPost)
+	state.myPage.MyPageData.push(newPost);
+	rerenderEntireTree(state);
 };
+
+export let addMessage = (postMessage) => {
+
+	let newPost = {
+		id: 5,
+		message: postMessage,
+	};
+
+	state.messagePage.smsData.push(newPost);
+	rerenderEntireTree(state);
+};
+
+
 
 
 export default state;

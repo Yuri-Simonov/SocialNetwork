@@ -10,30 +10,30 @@ import Music from './components/Music/Music ';
 import Games from './components/Games/Games';
 import Settings from './components/Settings/Settings';
 import { Route } from 'react-router';
-import { BrowserRouter } from 'react-router-dom';
+
 
 
 const App = (props) => {
 
 	return (
 		<body className="page">
-			<BrowserRouter>
-				<div className="container">
-					<div className="wrapper">
-						<Header />
-						<Nav />
-						<div className="content">
-							<Route path="/myPage" render={() => <MyPage state={props.state.myPage} friends={props.friends} addPost={props.addPost} />} />
-							<Route path="/news" render={() => <News />} />
-							<Route path="/messages" render={() => <Messages state={props.state.messagePage} />} />
-							<Route path="/photos" render={() => <Photo />} />
-							<Route path="/music" render={() => <Music />} />
-							<Route path="/games" render={() => <Games />} />
-							<Route path="/settings" render={() => <Settings />} />
-						</div>
+
+			<div className="container">
+				<div className="wrapper">
+					<Header />
+					<Nav />
+					<div className="content">
+						<Route path="/myPage" render={() => <MyPage state={props.state.myPage} friends={props.friends} addPost={props.addPost} />} />
+						<Route path="/news" render={() => <News />} />
+						<Route path="/messages" render={() => <Messages state={props.state.messagePage} addMessage={props.addMessage} />} />
+						<Route path="/photos" render={() => <Photo />} />
+						<Route path="/music" render={() => <Music />} />
+						<Route path="/games" render={() => <Games />} />
+						<Route path="/settings" render={() => <Settings />} />
 					</div>
 				</div>
-			</BrowserRouter>
+			</div>
+
 		</body >
 	);
 }
