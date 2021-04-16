@@ -8,6 +8,7 @@ let state = {
 			{ id: 3, message: "Сегодня начал изучать основы JavaScript", },
 			{ id: 4, message: "Что-то тут совсем тихо", },
 			{ id: 5, message: "Всем привет, я тут новенький!", },
+
 		],
 		/* friendsNames: [
 			{ id: 1, name: "Света", },
@@ -15,6 +16,7 @@ let state = {
 			{ id: 3, name: "Игорь", },
 		], */
 		friendsNames: ["Света", "Рома", "Игорь"],
+		newPostText: 'новое текстовое значение поста на своей странице',
 	},
 	messagePage: {
 		smsData: [
@@ -23,6 +25,7 @@ let state = {
 			{ id: 3, message: "Ау", },
 			{ id: 4, message: "Ты тут?", },
 		],
+		newMessageText: 'новое текстовое значение поста в сообщениях',
 		messagesUser: [
 			{ id: 1, name: "Маша", },
 			{ id: 2, name: "Дима", },
@@ -35,28 +38,45 @@ let state = {
 
 }
 
-export let addPost = (postMessage) => {
+//Добавление новых сообщений на стене "Моя страница"
+export let addPost = () => {
 
 	let newPost = {
 		id: 6,
-		message: postMessage,
+		message: state.myPage.newPostText,
 	};
 
 	state.myPage.MyPageData.push(newPost);
+	state.myPage.newPostText = "";
 	rerenderEntireTree(state);
 };
 
-export let addMessage = (postMessage) => {
+//Добавление новых сообщений в переписках
+export let addMessage = () => {
 
 	let newPost = {
 		id: 5,
-		message: postMessage,
+		message: state.messagePage.newMessageText,
 	};
 
 	state.messagePage.smsData.push(newPost);
+	state.messagePage.newMessageText = "";
 	rerenderEntireTree(state);
 };
 
+//Обновление сообщений побуквенно при их вводе в textarea на стене "Моя страница"
+export let updateNewPostText = (newText) => {
+
+	state.myPage.newPostText = newText;
+	rerenderEntireTree(state);
+};
+
+//Обновление сообщений побуквенно при их вводе в textarea на стене "Cообщения"
+export let updateNewMessageText = (newMessage) => {
+
+	state.messagePage.newMessageText = newMessage;
+	rerenderEntireTree(state);
+};
 
 
 

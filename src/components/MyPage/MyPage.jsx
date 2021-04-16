@@ -14,10 +14,13 @@ const MyPage = (props) => {
 	let newPostElement = React.createRef();
 
 	let addPost = () => {
+		props.addPost();
+	}
 
+	let onPostChange = () => {
 		let newText = newPostElement.current.value;
-		props.addPost(newText);
-		newPostElement.current.value = '';
+		props.updateNewPostText(newText);
+
 	}
 
 	return (
@@ -26,8 +29,8 @@ const MyPage = (props) => {
 			{/* 	{friendsNames} */}
 			<div className={s.title}>Что у вас новенького?</div>
 			<div className={s.flex}>
-				<textarea className={s.textarea} ref={newPostElement}></textarea>
-				<button className={s.button} onClick={addPost}>Отправить</button>
+				<textarea onChange={onPostChange} placeholder="Поделитесь своими мыслями с другими людьми" className={s.textarea} ref={newPostElement} value={props.newPostText} />
+				<button button className={s.button} onClick={addPost}>Отправить</button>
 			</div>
 			{postsElements}
 		</div>

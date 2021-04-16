@@ -13,11 +13,16 @@ const Messages = (props) => {
 	let messagesElements = props.state.messagesUser.map((d) => <MessagesItem name={d.name} id={d.id} />);
 
 
-	let newTextMessage = React.createRef();
+	let newPostElement = React.createRef();
+
 	let addMessage = () => {
-		let newMessage = newTextMessage.current.value;
-		props.addMessage(newMessage);
-		newTextMessage.current.value = "";
+		props.addMessage();
+	}
+	//
+	let onMessageChange = () => {
+		let newMessage = newPostElement.current.value;
+		props.updateNewMessageText(newMessage);
+		console.log(newMessage);
 	}
 
 	return (
@@ -29,7 +34,7 @@ const Messages = (props) => {
 				<div className={s.sms}>
 					{smsElements}
 					<div className={s.flex}>
-						<textarea className={s.textarea} ref={newTextMessage}></textarea>
+						<textarea onChange={onMessageChange} className={s.textarea} ref={newPostElement} value={props.newMessageText}></textarea>
 						<button className={s.button} onClick={addMessage}>Отправить</button>
 					</div>
 				</div>
