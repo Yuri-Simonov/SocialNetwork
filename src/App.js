@@ -23,9 +23,9 @@ const App = (props) => {
 					<Header />
 					<Nav />
 					<div className="content">
-						<Route path="/myPage" render={() => <MyPage state={props.state.myPage} friends={props.friends} addPost={props.addPost} newPostText={props.state.myPage.newPostText} updateNewPostText={props.updateNewPostText} />} />
+						<Route path="/myPage" render={() => <MyPage state={props.state.myPage} dispatch={props.dispatch} friends={props.state.friendsNames} />} />
 						<Route path="/news" render={() => <News />} />
-						<Route path="/messages" render={() => <Messages state={props.state.messagePage} addMessage={props.addMessage} newMessageText={props.state.messagePage.newMessageText} updateNewMessageText={props.updateNewMessageText} />} />
+						<Route path="/messages" render={() => <Messages state={props.state.messagePage} dispatch={props.dispatch} />} />
 						<Route path="/photos" render={() => <Photo />} />
 						<Route path="/music" render={() => <Music />} />
 						<Route path="/games" render={() => <Games />} />
