@@ -17,7 +17,6 @@ const App = (props) => {
 
 	return (
 		<body className="page">
-
 			<div className="container">
 				<div className="wrapper">
 					<Header />

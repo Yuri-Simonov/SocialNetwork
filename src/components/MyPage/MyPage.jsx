@@ -2,7 +2,7 @@ import Posts from './Posts/Post';
 import MyPageTopSection from './MyPageTopSection/MyPageTopSection';
 import s from './MyPage.module.css';
 import React from 'react';
-import { AddPostActionCreator, onPostChangeActionCreator } from '../Redux/state';
+import { AddPostActionCreator, onPostChangeActionCreator } from '../Redux/myPage-reducer';
 
 const MyPage = (props) => {
 

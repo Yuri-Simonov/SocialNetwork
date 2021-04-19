@@ -1,9 +1,8 @@
-import { NavLink } from 'react-router-dom';
 import s from './Messages.module.css';
 import MessagesItem from './MessagesItem/MessagesItem';
 import MessagesValue from './MessagesValue/MessagesValue';
 import React from 'react';
-import { AddMessageActionCreator, onMessageChangeActionCreator } from '../Redux/state';
+import { AddMessageActionCreator, onMessageChangeActionCreator } from '../Redux/messagePage-reducer';
 
 //Сводка имен и содержимого сообщений в одно целое
 const Messages = (props) => {

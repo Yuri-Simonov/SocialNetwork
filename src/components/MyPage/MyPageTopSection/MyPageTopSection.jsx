@@ -1,5 +1,5 @@
 import s from './MyPageTopSection.module.css';
-import state from "../../Redux/state"
+import state from "../../Redux/store"
 
 const MyPageTopSection = (props) => {
 
